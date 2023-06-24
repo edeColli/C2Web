@@ -33,16 +33,17 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="../">Home</a></li>
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/about/">Sobre</a></li>
-          <!-- {% if user.is_authenticated %} -->
+          {% if user.is_authenticated %}
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/empresa/">Empresa</a></li>
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/produto/">Produto</a></li>
-          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/secao/">Secao</a></li>
+          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/pessoa/">Pessoa</a></li>
+          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/secao/">Seção</a></li>
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/sair/">Sair</a></li>
-          <!-- {% else %} -->
+          {% else %}
           <!-- <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/contato/">Contatos</a></li> -->
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/signup/">Cadastrar</a></li>
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/logar/">Log-in</a></li>
-          <!-- {% endif%} -->
+          {% endif%}
         </ul>
       </div>
     </nav>

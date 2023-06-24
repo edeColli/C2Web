@@ -26,13 +26,7 @@ def logar(request):
       })
     else:
       login(request, user)
-      empresa_sessao = getSessionEmpresa(request)      
-      session = SessionStore()
-      session['empresa_sessao'] = empresa_sessao
-      session.save()
-      print('=====SESSAO=====')
-      for key, value in request.session.items():
-        print('{} => {}'.format(key, value))
-      print('=====SESSAO=====')
-      
+      empresa_sessao = getSessionEmpresa(request)
+      request.session['empresa_sessao'] = empresa_sessao
+      request.session.save()
       return redirect('/')

@@ -20,6 +20,7 @@ from main import views
 from main.Views.empresa import empresa
 from main.Views.secao import secao
 from main.Views.produto import produto
+from main.Views.pessoa import pessoa
 from main.Views.login import logar
 
 urlpatterns = [
@@ -31,4 +32,5 @@ urlpatterns = [
     path("empresa/", empresa, name='empresa'),
     path("secao/", secao, name='secao'),
     path("produto/", produto, name='produto'),
+    path("pessoa/", pessoa, name='pessoa'),
 ]

@@ -1,14 +1,15 @@
 from datetime import date
 from django.shortcuts import render
 from main.forms import ProdutoForm
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def produto(request):
     sucesso = False
 
     if request.method == 'GET':
       form = ProdutoForm()
-    else:
-      print(request)
+    else:      
       form = ProdutoForm(request.POST)
       if form.is_valid():
         produto = form.save(commit=False)
