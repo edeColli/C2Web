@@ -1,14 +1,14 @@
 {% extends 'inicio.html' %} {% block principal %}
 <div class="text-center mt-5 pt-5">
-  <h1>Cadastro de Produto</h1>
+  <h1>Cadastro de Pessoa</h1>
   <!-- <p>Envie sua mensagem ou entre em contato com {{responsavel}} pelo telefone {{telefone}}</p> -->
 
   {%if sucesso %}
-  <p class="alert alert-success">Produto salvo com sucesso</p>
+  <p class="alert alert-success">Pessoa salva com sucesso</p>
   {% else %}
-  <form action="" method="POST">
+  <form action="" method="POST">    
     {% csrf_token %} {% load bootstrap5 %} {% bootstrap_form formulario %}
-    <hr />
+    <hr />    
     <button typpe="submit" class="btn btn-primary">Salvar</button>
   </form>
   {% endif %}
